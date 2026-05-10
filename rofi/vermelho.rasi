@@ -1,0 +1,32 @@
+* {
+    bg: #000000;
+    fg: #ffffff;
+    accent: #ff0000;
+    
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/* Garante que o texto dentro dos elementos herde a cor correta */
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+/* Cor quando você navega com as setas */
+element selected.normal {
+    background-color: @accent;
+    text-color:       @bg;
+}
+
+/* Caso existam linhas alternadas (zebrado) */
+element alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+/* Se o item estiver ativo (ex: janela aberta) */
+element selected.active {
+    background-color: @accent;
+    text-color:       @bg;
+}
