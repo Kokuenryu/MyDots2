@@ -1,0 +1,32 @@
+* {
+    bg: #1d2021;       /* Cinza escuro azulado (fundo) */
+    fg: #f8f9fa;       /* Branco limpo/claro (texto) */
+    accent: #3c6eb4;   /* Azul clássico do Fedora (destaque) */
+    
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/* Garante que o texto dentro dos elementos herde a cor correta */
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+/* Cor quando você navega com as setas */
+element selected.normal {
+    background-color: @accent;
+    text-color:       @fg;       /* Alterado para fg (branco) para melhor contraste com o fundo azul */
+}
+
+/* Caso existam linhas alternadas (zebrado) */
+element alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+/* Se o item estiver ativo (ex: janela aberta) */
+element selected.active {
+    background-color: @accent;
+    text-color:       @fg;       /* Alterado para fg para manter o padrão legível no azul */
+}
